@@ -1,0 +1,39 @@
+{{> menu id="about"}}
+
+<section class="ui segment">
+
+    <h2 class="centered">Sith have no fear. Still wanna learn from the most powerful?</h2>
+    <p class="centered">
+        Have you come here for answers? There are none. She hopes that you will be spared, only so you might suffer.
+    </p>
+    <div class="column">
+        {{#with info}}
+            <!--
+            ────────────────────────────────────────────────────────────
+            MAIN CONTENT ATTACHED TO THE LEFT: MAP, CREATOR NAME
+            ────────────────────────────────────────────────────────────
+             -->
+            <div>
+                <h1 class="centered title dark">Creator: {{creator}}</h1>
+                <p>{{creator_information}}</p>
+                <h1>Possible location:</h1>
+                <iframe class="centered" src="{{mapLink}}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!--
+            ────────────────────────────────────────────────────────────
+            SECONDARY CONTENT ATTACHED TO THE RIGHT: OTHER INFORMATION
+            ────────────────────────────────────────────────────────────
+             -->
+            <div class="character panel">
+                <div class="column">
+                    <img src="../assets/logo_small/small_dark.webp" alt="Logo dark" class="icon">
+                    <img src="../assets/logo_small/small_dark.webp" alt="Logo dark" class="icon">
+                </div>
+                <img src="{{creator_image_location}}" alt="Image of the website's creator">
+                <p>Age: <span>{{age}}</span></p>
+                <p>Skills: <span>{{skills}}</span></p>
+            </div>
+        {{/with}}
+    </div>
+
+</section>

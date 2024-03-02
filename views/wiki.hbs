@@ -1,0 +1,38 @@
+{{> menu id="wiki"}}
+
+<section class="ui segment">
+
+    <h2 class="centered title">All characters from Star Wars the Old Republic</h2>
+
+    {{#unless characters}}
+        <h3 class="center">
+            Jedi in hell, why is there no characters?
+        </h3>
+    {{/unless}}
+
+    {{#each characters}}
+        <section class="ui segment">
+            <!--
+            ────────────────────────────────────────────────────────────
+            IF THE CHARACTER IS ON THE DARK SIDE
+            ────────────────────────────────────────────────────────────
+             -->
+            {{#ifCond side '==' 'dark'}} <!-- Custom condition helper check written in server.js -->
+                <img src="../assets/logo_small/dark.webp" class="logosmall centered" alt="Star wars decorative image">
+                <h3 class="centered title dark">{{name}}</h3>
+            <!--
+            ────────────────────────────────────────────────────────────
+            IF THE CHARACTER IS ON THE BRIGHT SIDE
+            ────────────────────────────────────────────────────────────
+             -->
+            {{else}}
+                <img src="../assets/logo_small/light.webp" class="logosmall centered" alt="Star wars decorative image">
+                <h3 class="centered title light">{{name}}</h3>
+            {{/ifCond}}
+
+            <p class="centered">{{biography}}</p>
+            <button type="button" onclick="loadChar('{{id}}')"><img src="../assets/button_seemore.webp" alt="See more button" class="seemore"/></button>
+        </section>
+    {{/each}}
+
+</section>

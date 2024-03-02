@@ -1,0 +1,13 @@
+
+{
+  "infos": {
+    "appTitle": "Star wars The Old Republic Wiki",
+    "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.852515436442!2d-7.141279423788995!3d52.246062456475535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4842c41310dd4131%3A0x4042f0dcf13f7cfe!2sSouth%20East%20Technological%20University%20%7C%20Waterford!5e0!3m2!1sen!2sfr!4v1709228854401!5m2!1sen!2sfr",
+    "creator": "Darth Revan",
+    "age": "1-50000 Years old",
+    "skills": "Be dishonored in films",
+    "creator_image_location": "../assets/characters/darth_revan.webp",
+    "creator_information": "No one has any information about him.",
+    "information": "This Star Wars wiki contains all information you need. You can find all characters in the wiki page. By clicking 'see more' you will find the biography and all information about the selected character. May the force be... with you?"
+  }
+}

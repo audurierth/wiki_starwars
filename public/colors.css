@@ -1,0 +1,8 @@
+/*
+Create variables in favor of the DRY slogan (Dont repeat yourself).
+ */
+:root {
+    --dark_color: #c0392b;
+    --light_color: #1abc9c;
+    --orange_color: #f39c12;
+}

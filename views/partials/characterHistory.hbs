@@ -1,0 +1,53 @@
+<!--
+────────────────────────────────────────────────────────────
+PARTIALS: Define a general partial element which can be reused several times.
+────────────────────────────────────────────────────────────
+ -->
+
+{{#with singleChar}}
+    <!--
+    ────────────────────────────────────────────────────────────
+    CHARACTER wiki information
+    ────────────────────────────────────────────────────────────
+     -->
+    <article class="character">
+        {{#if history}}
+
+            <section class="column">
+                <!--
+                ────────────────────────────────────────────────────────────
+                MAIN CONTENT ATTACHED TO THE LEFT: BIOGRAPHY, TITLE AND HISTORY
+                ────────────────────────────────────────────────────────────
+                 -->
+                <div>
+                    <p>{{biography}}</p>
+                    {{#each history}}
+                        <div>
+                            <h1 class="subtitle"><span>{{@key}}</span></h1>
+                            <p class="character__text">{{this}}</p>
+                        </div>
+                    {{/each}}
+                </div>
+                <!--
+                ────────────────────────────────────────────────────────────
+                SECONDARY CONTENT ATTACHED TO THE RIGHT: OTHERS INFORMATION
+                ────────────────────────────────────────────────────────────
+                 -->
+                <div class="character panel">
+                    <div class="column">
+                        <img src="../assets/logo_small/small_{{side}}.webp" alt="Logo {{side}}" class="icon">
+                        <img src="../assets/logo_small/small_{{side}}.webp" alt="Logo {{side}}" class="icon">
+                    </div>
+                    <img src="../assets/characters/{{id}}.webp" alt="{{image_credits}}">
+                    <p>Main planet: <span>{{main_planet}}</span></p>
+                    <p>Lightsaber: <span>{{lightsaber_color}}</span></p>
+                </div>
+            </section>
+        {{else}}
+            <section>
+                <h1 class="centered">Oops !</h1>
+                <p class="centered">This character seems to not having any information.</p>
+            </section>
+        {{/if}}
+    </article>
+{{/with}}

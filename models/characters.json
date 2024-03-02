@@ -1,0 +1,70 @@
+
+{
+  "comments": [
+    "All of this data has been partially generated using chatGPT.",
+    "chatGPT link: https://chat.openai.com/share/f6ccbdd4-5089-4754-8567-71b601a30ab8"
+  ],
+  "characters": [
+    {
+      "id": "darth_malgus",
+      "name": "Darth Malgus",
+      "main_planet": "Korriban",
+      "biography": "Darth Malgus, born under the name Veradun, was a Human male Sith Lord of the Sith Empire during the Great Galactic War.",
+      "history": {
+        "Rise of Cartell": "During the Rise of the Hutt Cartel, Darth Malgus played a significant role in the events surrounding the conflict between the Hutt Cartel and the Galactic Republic.",
+        "Shadow of Revan": "In the Shadow of Revan, Darth Malgus resurfaced, seeking to carve his own path amid the chaos caused by Revan's return.",
+        "Fallen Empire": "During the Knights of the Fallen Empire, Darth Malgus's legacy continued to influence events, albeit indirectly, as factions vied for control in the wake of Emperor Valkorion's fall.",
+        "Eternal Throne": "In the Knights of the Eternal Throne, Darth Malgus's influence endured, with remnants of his ideology shaping the galaxy's future."
+      },
+      "image_credits": "Darth Malgus image",
+      "lightsaber_color": "Red",
+      "side": "dark"
+    },
+    {
+      "id": "satele_shan",
+      "name": "Satele Shan",
+      "main_planet": "Tython",
+      "biography": "Satele Shan was a Human female Jedi Master and the Grand Master of the Jedi Order during the Cold War and subsequent conflicts with the Sith Empire.",
+      "history": {
+        "Rise of Cartel": "During the Rise of the Hutt Cartel, Satele Shan played a pivotal role in defending the Republic against the Hutt Cartel's aggression.",
+        "Shadow of Revan": "In the Shadow of Revan, Satele Shan led the Jedi Order in confronting the returned Revan and preventing his destructive plans.",
+        "Fallen Empire": "During the Knights of the Fallen Empire, Satele Shan faced new challenges as the Eternal Empire threatened both the Republic and the Sith Empire.",
+        "Eternal Throne": "In the Knights of the Eternal Throne, Satele Shan continued to guide the Jedi Order and the Republic in the face of the Eternal Empire's tyranny."
+      },
+      "image_credits": "Satele Shan image by Star Wars Wiki",
+      "lightsaber_color": "Blue",
+      "side": "light"
+    },
+    {
+      "id": "darth_marr",
+      "name": "Darth Marr",
+      "main_planet": "Dromund Kaas",
+      "biography": "Darth Marr, born as Vindican, was a pureblood Sith Lord and a member of the Dark Council, serving as the Emperor's Wrath and later as the de facto leader of the Sith Empire.",
+      "history": {
+        "Rise of Cartel": "During the Rise of the Hutt Cartel, Darth Marr played a crucial role in maintaining the Sith Empire's stability amidst the chaos caused by the Hutt Cartel's incursions.",
+        "Shadow of Revan": "In the Shadow of Revan, Darth Marr allied with the Sith Emperor's forces to combat the Revanites and their threat to the Empire's stability.",
+        "Fallen Empire": "During the Knights of the Fallen Empire, Darth Marr faced the challenge of Emperor Valkorion's return and the subsequent invasion by the Eternal Empire.",
+        "Eternal Throne": "In the Knights of the Eternal Throne, Darth Marr's leadership was instrumental in rallying the Sith against the Eternal Empire's tyranny, though his efforts ultimately led to his demise."
+      },
+      "image_credits": "Darth Marr image by BojanaJokic",
+      "lightsaber_color": "Red",
+      "side": "dark"
+    },
+    {
+      "id": "gnost_dural",
+      "name": "Gnost-Dural",
+      "main_planet": "Coruscant",
+      "biography": "Gnost-Dural was a male Cerean Jedi Master who served as the Keeper of the Jedi Archives during the Cold War, known for his extensive knowledge of Jedi history and his contributions to recording events of his time.",
+      "history": {
+        "Rise of Cartel": "During the Rise of the Hutt Cartel, Jedi Master Gnost-Dural provided critical intelligence and strategic guidance to the Jedi Order in their efforts against the Hutt Cartel.",
+        "Shadow of Revan": "In the Shadow of Revan, Gnost-Dural played a key role in deciphering Revan's plans and aiding the Jedi in their mission to thwart the Revanites.",
+        "Fallen Empire": "During the Knights of the Fallen Empire, Gnost-Dural's wisdom and experience were invaluable as the Jedi Order faced unprecedented challenges from the Eternal Empire.",
+        "Eternal Throne": "In the Knights of the Eternal Throne, Jedi Master Gnost-Dural continued to advise the Jedi Order and the Galactic Republic, striving to uphold the Jedi principles in the face of adversity."
+      },
+      "image_credits": "Gnost dural image",
+      "lightsaber_color": "Green",
+      "side": "light"
+    }
+  ]
+}
+

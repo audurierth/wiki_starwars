@@ -1,0 +1,48 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="assets/favicon.ico" />
+        <title>{{title}}</title>
+
+        <!--
+        ────────────────────────────────────────────────────────────
+        LOAD CSS CONTENTS
+        ────────────────────────────────────────────────────────────
+         -->
+        <link rel="stylesheet" href="/colors.css">
+        <link rel="stylesheet" href="/reset.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/hyperspace.css">
+        <link rel="stylesheet" href="/fonts.css">
+    </head>
+    <body>
+        <!--
+        ────────────────────────────────────────────────────────────
+        LOAD PAGE CONTENT
+        ────────────────────────────────────────────────────────────
+         -->
+        <div class="bg"></div>
+        <section class="container">
+            {{{body}}}
+        </section>
+        <div class="star-field"> <!-- Used to make the galaxy animation in the background -->
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
+        </div>
+
+        <!--
+        ────────────────────────────────────────────────────────────
+        LOAD JAVASCRIPT CONTENTS
+        ────────────────────────────────────────────────────────────
+         -->
+        <!-- import the jQuery file -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                crossorigin="anonymous">
+        </script>
+        <!-- import the webpage's javascript file -->
+        <script src="/script.js" defer></script>
+    </body>
+</html>

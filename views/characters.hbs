@@ -1,0 +1,15 @@
+{{> menu}}
+
+
+<section class="ui center aligned middle aligned segment">
+    {{#with singleChar}}
+    <h2{{#ifCond side '==' 'dark'}}
+        class="centered title dark">
+    {{else}}
+        class="centered title light">
+    {{/ifCond}}
+        {{name}}
+    </h2>
+    {{/with}}
+    {{> characterHistory}}
+</section>

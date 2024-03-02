@@ -1,0 +1,179 @@
+/*
+────────────────────────────────────────────────────────────
+BASIS
+────────────────────────────────────────────────────────────
+ */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+.littleImage{
+    padding-left: 5%;
+    padding-right:5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 100%;
+}
+p, h2, h1, h3 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+em {
+    font-style: italic;
+}
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 30%;
+    height: 15%;
+}
+button img {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+────────────────────────────────────────────────────────────
+Custom style
+────────────────────────────────────────────────────────────
+ */
+.centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.ui.segment {
+    background-color: black;
+    color: white;
+    border: solid rgba(241, 196, 15,0.6);
+    padding: 5%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0,0.8);
+}
+
+/*
+────────────────────────────────────────────────────────────
+Menu style
+────────────────────────────────────────────────────────────
+ */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex:0.5;
+}
+.menuButton {
+    font-family: 'DeathStar', sans-serif;
+    color: var(--orange_color);
+}
+.menuButton:hover{
+    color: #34495e;
+}
+.right.menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    gap:1px;
+}
+
+/*
+────────────────────────────────────────────────────────────
+Characters titles
+────────────────────────────────────────────────────────────
+ */
+.title.dark {
+    color:var(--dark_color);
+}
+.title.light {
+    color:var(--light_color);
+}
+.title.dark:after{
+    content:' ';
+    display:block;
+    border:1px solid var(--dark_color);
+}
+.title.light:after{
+    content:' ';
+    display:block;
+    border:1px solid var(--light_color);
+}
+.title {
+    font-size: 2rem;
+    line-height: 4rem;
+
+}
+.subtitle {
+    font-size: 1.5rem;
+}
+.subtitle span {
+    border-bottom: 4px solid var(--orange_color);
+}
+
+/*
+────────────────────────────────────────────────────────────
+Single character wiki page
+────────────────────────────────────────────────────────────
+ */
+.logo {
+    width: 10%;
+    height: 10%;
+}
+.logosmall {
+    width: 20%;
+    height: 20%;
+    border-radius: 40%;
+}
+.column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.character.panel {
+    padding: 3%;
+    margin-left: 2%;
+    background-color: #1e1e1e;
+}
+.character.panel img{
+    width: 15vw;
+    height: 35vh;
+    border: solid black;
+}
+.character.panel span {
+    color: var(--orange_color);
+}
+.character.panel .icon {
+    width: auto;
+    height: auto;
+    padding-bottom: 5%;
+    border: none;
+}
