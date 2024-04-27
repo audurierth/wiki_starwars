@@ -35,7 +35,7 @@ const userStore = {
 
     async addUser(user, callback) {
         function uploader(){
-            return new Promise(function(resolve, reject) {
+            return new Promise(function(resolve, _) {
                 cloudinary.uploader.upload(user.picture.tempFilePath,function(result,err){
                     if(err){console.log(err);}
                     resolve(result);

@@ -30,7 +30,6 @@ import cloudinary from 'cloudinary';
 
 import { createRequire } from "module";
 import logger from "../utils/logger.js";
-import {response} from "express";
 const require = createRequire(import.meta.url);
 
 try {
@@ -68,7 +67,7 @@ const charactersStore = {
     async addChar(infos, response) {
         if(infos.picture != null){
             function uploader(){
-                return new Promise(function(resolve, reject) {
+                return new Promise(function(resolve, _) {
                     cloudinary.uploader.upload(infos.picture.tempFilePath,function(result,err){
                         if(err){console.log(err);}
                         resolve(result);

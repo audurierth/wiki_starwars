@@ -1,7 +1,6 @@
 'use strict';
 import websiteInfosStore from "../models/websiteinfos-store.js";
 import charactersStore from "../models/characters-store.js";
-import logger from "../utils/logger.js";
 import accounts from "./accounts.js";
 import about from "./about.js"
 

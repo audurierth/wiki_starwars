@@ -4,7 +4,6 @@ CONTROLLER: handle the link between view and models.
  */
 import charactersStore from "../models/characters-store.js";
 import { v4 as uuidv4 } from 'uuid';
-import swal from 'sweetalert';
 import accounts from "./accounts.js";
 import logger from "../utils/logger.js";
 
