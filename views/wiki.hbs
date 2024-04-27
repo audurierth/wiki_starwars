@@ -31,8 +31,17 @@
             {{/ifCond}}
 
             <p class="centered">{{biography}}</p>
-            <button type="button" onclick="loadChar('{{id}}')"><img src="../assets/button_seemore.webp" alt="See more button" class="seemore"/></button>
+            <div class="centered">
+                <button type="button" onclick="loadChar('{{id}}')" class="button__swtor swtor"><img src="../assets/button_seemore.webp" alt="See more button" class="button__swtor seemore"/></button>
+                <button type="button" onclick="window.location.href='../holocron/update/{{id}}'" class="button__swtor"><img src="../assets/logo_small/edit.svg" alt="Update character button"/></button>
+                <button type="button" onclick="window.location.href='../wiki/deletechar/{{id}}'" class="button__swtor"><img src="../assets/logo_small/delete.svg" alt="Delete character button"/></button>
+            </div>
+
         </section>
     {{/each}}
+
+    <h2 class="centered title">Add a character</h2>
+
+    {{> addchar}}
 
 </section>

@@ -10,6 +10,19 @@ PARTIALS: Define a general partial element which can be reused several times.
     CHARACTER wiki information
     ────────────────────────────────────────────────────────────
      -->
+    <div style="display: flex; justify-content: space-between">
+        <button type="button" onclick="window.location.href='../holocron/update/{{id}}'" class="button__swtor"><img src="../assets/logo_small/edit.svg" alt="Update character button" style="max-height: 20%; max-width: 20%"/></button>
+        <button type="button" onclick="window.location.href='../wiki/deletechar/{{id}}'" class="button__swtor"><img src="../assets/logo_small/delete.svg" alt="Delete character button" style="max-height: 20%; max-width: 20%"/></button>
+    </div>
+
+
+    <h2{{#ifCond side '==' 'dark'}}
+    class="centered title dark">
+    {{else}}
+        class="centered title light">
+    {{/ifCond}}
+        {{name}}
+    </h2>
     <article class="character">
         {{#if history}}
 
@@ -38,7 +51,7 @@ PARTIALS: Define a general partial element which can be reused several times.
                         <img src="../assets/logo_small/small_{{side}}.webp" alt="Logo {{side}}" class="icon">
                         <img src="../assets/logo_small/small_{{side}}.webp" alt="Logo {{side}}" class="icon">
                     </div>
-                    <img src="../assets/characters/{{id}}.webp" alt="{{image_credits}}">
+                    <img src="{{picture}}" alt="{{image_credits}}">
                     <p>Main planet: <span>{{main_planet}}</span></p>
                     <p>Lightsaber: <span>{{lightsaber_color}}</span></p>
                 </div>

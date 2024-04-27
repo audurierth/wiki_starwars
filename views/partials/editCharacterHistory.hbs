@@ -1,0 +1,126 @@
+<!--
+────────────────────────────────────────────────────────────
+PARTIALS: Define a general partial element which can be reused several times.
+────────────────────────────────────────────────────────────
+ -->
+
+{{#with singleChar}}
+    <!--
+    ────────────────────────────────────────────────────────────
+    CHARACTER wiki information
+    ────────────────────────────────────────────────────────────
+     -->
+    <div style="display: flex; justify-content: space-between">
+        <button type="button" onclick="window.location.href='../../holocron/{{id}}'" class="button__swtor"><img src="../../assets/logo_small/eye.svg" alt="See character button" style="max-height: 20%; max-width: 20%"/></button>
+        <button type="button" onclick="window.location.href='../../wiki/deletechar/{{id}}'" class="button__swtor"><img src="../../assets/logo_small/delete.svg" alt="Delete character button" style="max-height: 20%; max-width: 20%"/></button>
+    </div>
+    <form class="ui" action="/holocron/updatechar/{{id}}" method="POST">
+        <div class="field">
+            <label class="subtitle">Name</label>
+            <input type="text" name="name" autofocus required title = "Please include a valid Name"
+                   value="{{name}}" class="centered title dark caseform" style="margin-bottom: 2vw">
+        </div>
+        <article class="character">
+            <section class="column">
+                <!--
+                ────────────────────────────────────────────────────────────
+                MAIN CONTENT ATTACHED TO THE LEFT: BIOGRAPHY, TITLE AND HISTORY
+                ────────────────────────────────────────────────────────────
+                 -->
+                <div>
+                    <div class="field">
+                        <h1 class="subtitle"><span>Biography</span></h1>
+                        <div class="field">
+                            <textarea id="biography" name="biography" class="caseform withresize" rows="1">{{biography}}</textarea>
+                        </div>
+                    </div>
+
+                    {{#each history}}
+                        <h1 class="subtitle"><span>{{@key}}</span></h1>
+                        <div class="field">
+                            <textarea id="{{@key}}" name="{{@key}}" class="caseform withresize" rows="1">{{@this}}</textarea>
+                        </div>
+                    {{/each}}
+                </div>
+                <!--
+                ────────────────────────────────────────────────────────────
+                SECONDARY CONTENT ATTACHED TO THE RIGHT: OTHERS INFORMATION
+                ────────────────────────────────────────────────────────────
+                 -->
+                <div class="character panel">
+                    <div class="column">
+                        <img src="../../assets/logo_small/small_{{side}}.webp" alt="Logo {{side}}" class="icon">
+                        <img src="../../assets/logo_small/small_{{side}}.webp" alt="Logo {{side}}" class="icon">
+                    </div>
+                    <img src="{{picture}}" alt="{{image_credits}}">
+                    <div class="field">
+                        <fieldset>
+                            <legend>Which planet?
+                                <input type="text" name="planet" autofocus required title = "Please include a valid Planet"
+                                       value="{{main_planet}}" class="caseform2 formboxsize" style="border: none;
+                               color: var(--orange_color);font-family: 'Oswald', sans-serif;"></legend>
+                        </fieldset>
+                    </div>
+                    <div class="field">
+                        <fieldset>
+                            <legend>Which Lightsaber?
+                                <select name="lightsaber" id="lightsaber" class="caseform2 formboxsize" style="border: none;
+                               color: var(--orange_color);font-family: 'Oswald', sans-serif;">
+                                    {{#ifCond lightsaber_color '==' 'blue'}}
+                                        <option value="blue" selected="selected">Blue</option>
+                                    {{else}}
+                                        <option value="blue">Blue</option>
+                                    {{/ifCond}}
+                                    {{#ifCond lightsaber_color '==' 'green'}}
+                                        <option value="green" selected="selected">Green</option>
+                                    {{else}}
+                                        <option value="green">Green</option>
+                                    {{/ifCond}}
+                                    {{#ifCond lightsaber_color '==' 'red'}}
+                                        <option value="red" selected="selected">Red</option>
+                                    {{else}}
+                                        <option value="red">Red</option>
+                                    {{/ifCond}}
+                                    {{#ifCond lightsaber_color '==' 'white'}}
+                                        <option value="white" selected="selected">White</option>
+                                    {{else}}
+                                        <option value="white">White</option>
+                                    {{/ifCond}}
+                                    {{#ifCond lightsaber_color '==' 'purple'}}
+                                        <option value="purple" selected="selected">Purple</option>
+                                    {{else}}
+                                        <option value="purple">Purple</option>
+                                    {{/ifCond}}
+                                    {{#ifCond lightsaber_color '==' 'orange'}}
+                                        <option value="orange" selected="selected">Orange</option>
+                                    {{else}}
+                                        <option value="orange">Orange</option>
+                                    {{/ifCond}}
+                                </select></legend>
+                        </fieldset>
+                    </div>
+                    <div class="field">
+                        <fieldset id="fieldset__side">
+                            <legend>Which side?</legend>
+                            <label>{{#ifCond side '==' 'dark'}}
+                                <input class="radio__side" type="radio" name="side" value="dark" checked="checked"/> Dark
+                            {{else}}
+                                <input class="radio__side" type="radio" name="side" value="dark"/> Dark
+                            {{/ifCond}}</label>
+                            <label>{{#ifCond side '==' 'light'}}
+                                <input class="radio__side" type="radio" name="side" value="light" checked="checked" /> Light
+                            {{else}}
+                                <input class="radio__side" type="radio" name="side" value="light"/> Light
+                            {{/ifCond}}</label>
+                        </fieldset>
+                    </div>
+                </div>
+            </section>
+            <div class="centered column" style="margin-top: 5vh">
+                <button class="menuButton centered button__swtor">Cancel</button>
+                <button class="menuButton centered button__swtor" type="submit">Update</button>
+            </div>
+        </article>
+    </form>
+
+{{/with}}

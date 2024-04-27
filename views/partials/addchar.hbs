@@ -1,0 +1,59 @@
+<form class="ui segment form" action="/wiki/addchar" method="POST" enctype="multipart/form-data">
+    <div class="fields">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" autofocus required title = "Please include a valid Name"
+                   placeholder="Name" class="caseform formboxsize">
+        </div>
+        <div class="field">
+            <label>Main planet</label>
+            <input type="text" name="planet" required title = "Please include a valid Planet"
+                   placeholder="Planet" class="caseform formboxsize">
+        </div>
+    </div>
+    <div class="field">
+        <label for="lightsaber_select">Lightsaber color</label>
+        <select name="lightsaber" id="lightsaber_select" class="caseform formboxsize centered">
+            <option value="">--Choose the lightsaber color--</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="white">White</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+        </select>
+    </div>
+    <div class="field">
+        <fieldset id="fieldset__side">
+            <legend>Which side?</legend>
+            <label><input class="radio__side" type="radio" name="side" value="dark" /> Dark</label>
+            <label><input class="radio__side" type="radio" name="side" value="light" /> Light</label>
+        </fieldset>
+    </div>
+    <div class="field">
+        <label for="biography">Biography</label>
+        <textarea id="biography" name="biography" placeholder="Please include a valid biography" class="caseform" rows="1"></textarea>
+    </div>
+    <div class="field">
+        <label for="history1">Rise of cartell</label>
+        <textarea id="history1" name="history1" placeholder="Please include a valid history" class="caseform" rows="1"></textarea>
+    </div>
+    <div class="field">
+        <label for="history2">Shadow of Revan</label>
+        <textarea id="history2" name="history2" placeholder="Please include a valid history" class="caseform" rows="1"></textarea>
+    </div>
+    <div class="field">
+        <label for="history3">Fallen Empire</label>
+        <textarea id="history3" name="history3" placeholder="Please include a valid history" class="caseform" rows="1"></textarea>
+    </div>
+    <div class="field">
+        <label for="history4">Eternal Throne</label>
+        <textarea id="history4" name="history4" placeholder="Please include a valid history" class="caseform" rows="1"></textarea>
+    </div>
+    <div class="field">
+        <label>Image</label>
+        <input placeholder="Image" type="file" name="picture" required>
+    </div>
+    <button class="submit menuButton centered button__swtor">Add character</button>
+
+</form>

@@ -38,7 +38,7 @@ p, h2, h1, h3 {
 em {
     font-style: italic;
 }
-button {
+.button__swtor {
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
@@ -48,7 +48,7 @@ button {
     width: 30%;
     height: 15%;
 }
-button img {
+.button__swtor img {
     width: 100%;
     height: 100%;
 }
@@ -71,7 +71,12 @@ Custom style
     padding: 5%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0,0.8);
 }
-
+.svg {
+    fill:white;
+}
+.right {
+    margin-left: auto;
+}
 /*
 ────────────────────────────────────────────────────────────
 Menu style
@@ -176,4 +181,115 @@ Single character wiki page
     height: auto;
     padding-bottom: 5%;
     border: none;
+}
+/*
+────────────────────────────────────────────────────────────
+Add character wiki page
+────────────────────────────────────────────────────────────
+ */
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+.field label{
+    text-align: center;
+    margin-bottom: 5%;
+}
+.fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.caseform {
+    border: solid var(--orange_color);
+    color: var(--grey_color);
+    background-color: black;
+}
+.caseform2 {
+    border: solid var(--orange_color);
+    color: var(--grey_color);
+    background-color: #1e1e1e;
+}
+::placeholder {
+    color: var(--grey_color);
+    opacity: 1; /* Firefox */
+}
+fieldset{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: solid var(--grey_color);
+
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: var(--grey_color);
+}
+textarea{
+    resize: vertical;
+    min-height: 15vh;
+}
+
+.withresize{
+    resize: both;
+    min-height: 30vh;
+    min-width: 25vw;
+}
+
+.formboxsize {
+    width: 15vw;
+}
+
+/*
+────────────────────────────────────────────────────────────
+Sweet alert
+────────────────────────────────────────────────────────────
+ */
+.swal2-popup {
+    background-color: #000000;
+    border: solid var(--orange_color) !important;
+    color: #ffffff;
+    border: 3px solid white;
+}
+.swal-icon--success:after{
+    background: black !important;
+}
+.swal-icon--success:before{
+    background: black !important;
+}
+.swal-icon--success__hide-corners{
+    background-color: black !important;
+}
+.swal2-actions {
+    background-color: purple;
+}
+.swal2-confirm {
+    background-color: purple !important;
+}
+.swal2-actions:hover {
+    background-color: grey !important;
+}
+.swal2-confirm:hover {
+    background-color: grey !important;
+}
+/*
+────────────────────────────────────────────────────────────
+Authentification
+────────────────────────────────────────────────────────────
+ */
+.name{
+    line-height:20px;
+    font-weight:bold;
+    text-transform:capitalize;
+    margin-left: auto;
+}
+.profilepic img{
+    max-width: 8vw;
+    max-height: 8vh;
+}
+
+label input{
+    margin-top: 2%;
 }

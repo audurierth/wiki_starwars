@@ -4,8 +4,9 @@ import express from 'express';
 import routes from './routes.js';
 import logger from "./utils/logger.js";
 import { create } from 'express-handlebars';
-
-
+import bodyParser from "body-parser";
+import fileUpload from "express-fileupload";
+import cookieParser from "cookie-parser";
 
 const app = express();
 const port = 3000;
@@ -44,6 +45,13 @@ const handlebars = create({
                 default:
                     return options.inverse(this);
             }
+        },
+        sumNumbers: (number1,number2) => {
+            if(number1 != null && number2 != null){
+                return number1+number2;
+            } else {
+                return 0;
+            }
         }
     }
 });
@@ -52,7 +60,9 @@ const handlebars = create({
 Tell express to use custom CSS file.
  */
 app.use(express.static("public"));
-
+app.use(bodyParser.urlencoded({ extended: false, }));
+app.use(fileUpload({useTempFiles: true}));
+app.use(cookieParser());
 
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");

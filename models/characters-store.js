@@ -25,6 +25,23 @@ Each character contains:
   - lightsaber_color: the color of his labersaber.
   - side: His side
 */
+
+import cloudinary from 'cloudinary';
+
+import { createRequire } from "module";
+import logger from "../utils/logger.js";
+import {response} from "express";
+const require = createRequire(import.meta.url);
+
+try {
+    const env = require("../.data/.env.json");
+    cloudinary.config(env.cloudinary);
+}
+catch(e) {
+    logger.info('You must provide a Cloudinary credentials file - see README.md');
+    process.exit(1);
+}
+
 const charactersStore = {
 
     store: new JsonStore('./models/characters.json', { charactersCollection: [] }),
@@ -37,6 +54,10 @@ const charactersStore = {
     getAllCharacters() {
         return this.store.findAll(this.collection);
     },
+    getUserCharacters(userid){
+        return this.store.findBy(this.collection, (character => character.userid === userid));
+
+    },
 
     /*
     Method to a specified character from the json file.
@@ -44,6 +65,36 @@ const charactersStore = {
     getSingleChar(id) {
         return this.store.findOneBy(this.collection, (character => character.id === id));
     },
+    async addChar(infos, response) {
+        if(infos.picture != null){
+            function uploader(){
+                return new Promise(function(resolve, reject) {
+                    cloudinary.uploader.upload(infos.picture.tempFilePath,function(result,err){
+                        if(err){console.log(err);}
+                        resolve(result);
+                    });
+                });
+            }
+            let result = await uploader();
+            logger.info('cloudinary result', result);
+            infos.picture = result.url;
+
+            this.store.addCollection(this.collection, infos);
+            response();
+        } else {
+            this.store.addCollection(this.collection, infos);
+        }
+
+    },
+
+    removeChar(id) {
+        const char = this.getSingleChar(id);
+        this.store.removeCollection(this.collection, char);
+    },
+
+    editChar(id, updatedInfos, response) {
+        this.store.editCollection(this.collection, id, updatedInfos).then(_ => response());
+    }
 
 };
 

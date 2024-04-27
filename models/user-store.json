@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "firstName": "Johnson",
+      "lastName": "Test",
+      "id": "87552f3a-4663-4091-9cc1-793dcef99b11",
+      "email": "t@gmail.com",
+      "password": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+      "picture": "http://res.cloudinary.com/web-app-dev-theo/image/upload/v1714217674/hmdftog8aegyavh70pun.jpg"
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Test",
+      "id": "cdd730be-222c-407f-b60f-1ab0fc22ba45",
+      "email": "t2@gmail.com",
+      "password": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+      "picture": "http://res.cloudinary.com/web-app-dev-theo/image/upload/v1714239358/ghiizry8dk7nmesbynu5.jpg"
+    }
+  ]
+}

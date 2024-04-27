@@ -1,0 +1,38 @@
+{{> welcomemenu id="signup"}}
+
+<form class="ui stacked segment form" action="/register" method="POST" enctype="multipart/form-data">
+    <h3 class="title centered">Register</h3>
+    <div class="two fields">
+        <div class="field">
+            <label>
+                First Name
+                <input placeholder="First Name" type="text"  name="firstName" autofocus required class="caseform formboxsize centered">
+            </label>
+        </div>
+        <div class="field">
+            <label>
+                Last Name
+                <input placeholder="Last Name" type="text"  name="lastName" required class="caseform formboxsize centered">
+            </label>
+        </div>
+    </div>
+    <div class="field">
+        <label>
+            Email
+            <input placeholder="Email" type="text" name="email" required class="caseform formboxsize centered">
+        </label>
+    </div>
+    <div class="field">
+        <label>
+            Password
+            <input type="password" name="password" placeholder="Your password" required class="caseform formboxsize centered">
+        </label>
+    </div>
+    <div class="field">
+        <label>
+            Image
+            <input placeholder="Image" type="file" name="picture" required class="centered caseform">
+        </label>
+    </div>
+    <button class="submit menuButton centered button__swtor">Submit</button>
+</form>

@@ -35,5 +35,44 @@
             </div>
         {{/with}}
     </div>
+    <h1 class="title centered">You created...</h1>
+    <div class="fields">
+        <div class="field">
+            <h3>Dark side characters</h3>
+            <img src="../assets/logo_small/small_dark.webp" alt="Dark logo" width="50%" height="50%" class="centered">
+            <p class="centered">{{nbrDarkPeople}}</p>
+        </div>
+        <div class="field">
+            <h3>Light side characters</h3>
+            <img src="../assets/logo_small/small_light.webp" alt="Light logo" width="50%" height="50%" class="centered">
+            <p class="centered">{{nbrLightPeople}}</p>
+        </div>
+    </div>
+    <div class="fields">
+        <div class="fields">
+            <div class="field">
+                <h3 class="centered">Total characters</h3>
+                <img src="../assets/logo_small/total.svg" alt="Total logo" width="50%" height="50%" class="centered">
+                <p class="centered">{{sumNumbers nbrDarkPeople nbrLightPeople}}</p>
+            </div>
+            <div class="field">
+                <h3 class="centered">Average biography length</h3>
+                <img src="../assets/logo_small/average.svg" alt="Average logo" width="50%" height="50%" class="centered">
+                <p class="centered">{{averageBiography}}</p>
+            </div>
+        </div>
+        <div class="fields">
+            <div class="field">
+                <h3 class="centered">Lowest biography length</h3>
+                <img src="../assets/logo_small/small.svg" alt="Small logo" width="50%" height="50%" class="centered">
+                <p class="centered">{{lowestBiography}}</p>
+            </div>
+            <div class="field">
+                <h3 class="centered">Largest biography length</h3>
+                <img src="../assets/logo_small/medium.svg" alt="Largest logo" width="50%" height="50%" class="centered svg">
+                <p class="centered">{{largestBiography}}</p>
+            </div>
+        </div>
+    </div>
 
 </section>
